@@ -2,6 +2,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Header from "../components/Header"
 import Filme from "../pages/Filme";
+import Favoritos from "../pages/Favoritos"
 
 export const Router = () => {
     return(
@@ -10,6 +11,7 @@ export const Router = () => {
         <Switch>
             <Route exact path="/" component={Home}/>
             <Route exact path="/filme/:id"  component={Filme} />
+            <Route exact path="/favoritos" component={Favoritos} />
         </Switch>
     </BrowserRouter>
     )
