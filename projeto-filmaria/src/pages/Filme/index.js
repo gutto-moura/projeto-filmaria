@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {useParams, useHistory} from 'react-router-dom';
 import axios from 'axios';
 import { BASE_URL } from '../../constants/api';
+import { toast } from 'react-toastify';
 
 const Filme = () => {
     const {id} = useParams();
@@ -35,13 +36,13 @@ const Filme = () => {
         const filmesDuplicados = filmesSalvos.some((filmeSalvos) => filmeSalvos.id === filme.id)
 
         if(filmesDuplicados){
-            alert('Este filme ja foi salvo');
+            toast.error('Este filme ja foi salvo')
             return
         }
 
         filmesSalvos.push(filme)
         localStorage.setItem('filmes', JSON.stringify(filmesSalvos))
-        alert(`O FILME ${filme.nome} FOI SALVO COM SUCESSO!`);
+        toast.success(`O FILME ${filme.nome} FOI SALVO COM SUCESSO!`)
     }
     if(loading){
         return (
