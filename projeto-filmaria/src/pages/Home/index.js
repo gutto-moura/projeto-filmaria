@@ -2,10 +2,12 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BASE_URL } from "../../constants/api";
 import {Link} from "react-router-dom";
+import {HomeContainer, DetalhesFilmes, ImgFilmes, TituloFilme, LinkAcessar} from "./style"
+
+
 
 const  Home = () => {
     const [filmes, setFilmes] = useState([]);
-    
 
     useEffect(() => {
         const loadFilmes = () => {
@@ -22,17 +24,17 @@ const  Home = () => {
     }, [])
 
   return (
-    <div>
+    <HomeContainer>
      {filmes.map((filme) => {
          return(
-             <article key = {filme.id}>
-                <h2>{filme.nome}</h2>
-                <img src = {filme.foto} alt = {filme.nome}/>
-                <Link to={`/filme/${filme.id}`}>Acessar</Link>
-             </article>
+             <DetalhesFilmes key = {filme.id}>
+                <TituloFilme>{filme.nome}</TituloFilme>
+                <ImgFilmes src = {filme.foto} alt = {filme.nome}/>
+                <LinkAcessar to={`/filme/${filme.id}`}>Acessar</LinkAcessar> 
+             </DetalhesFilmes>
          )
      })}
-    </div>
+    </HomeContainer>
   );
 }
 

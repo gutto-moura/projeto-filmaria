@@ -3,6 +3,7 @@ import {useParams, useHistory} from 'react-router-dom';
 import axios from 'axios';
 import { BASE_URL } from '../../constants/api';
 import { toast } from 'react-toastify';
+import Loading from '../../components/Loading'
 
 const Filme = () => {
     const {id} = useParams();
@@ -47,7 +48,7 @@ const Filme = () => {
     if(loading){
         return (
             <div>
-                <h1>Carregando...</h1>
+                <Loading />
             </div>
         )
     }

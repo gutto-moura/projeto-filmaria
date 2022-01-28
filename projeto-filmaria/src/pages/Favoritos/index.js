@@ -1,4 +1,5 @@
-import {useEffect, useState} from "react";
+import React,  {useEffect, useState} from "react";
+import {Link} from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 function Favoritos() {
@@ -7,7 +8,6 @@ function Favoritos() {
   useEffect(() => {
     const minhaLista = localStorage.getItem('filmes');
     setFilmes(JSON.parse(minhaLista) || []);
-
   },[])
 
   const deletarFilme  = ((id) => {
@@ -29,15 +29,13 @@ function Favoritos() {
             <li key = {item.id}>
                 <span>{item.nome}</span>
               <div>
-                <link to={`/filme/${item.id}`}>Ver detalhes</link>
+                <Link to={`/filme/${item.id}`}>Ver detalhes</Link>
                 <button onClick={() => deletarFilme(item.id)}>Excluir</button>
               </div>
             </li>
-            
            ) 
           })}
         </ul>
-
     </div>
   );
 }
