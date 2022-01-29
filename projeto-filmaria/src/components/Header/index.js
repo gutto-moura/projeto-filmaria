@@ -25,7 +25,6 @@ function Header() {
         <Box sx={{ flexGrow: 1}}>
         <AppBar position="static" theme={theme}>
           <Toolbar color="secondary">
-
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <Links color="inherit" to={`/`}>FILMARIA</Links>
             </Typography>

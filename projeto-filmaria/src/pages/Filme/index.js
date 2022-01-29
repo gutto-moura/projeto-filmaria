@@ -4,6 +4,8 @@ import axios from 'axios';
 import { BASE_URL } from '../../constants/api';
 import { toast } from 'react-toastify';
 import Loading from '../../components/Loading'
+import {HomeFilmes, TituloFilme, SinopseFilme, ButtonsFilme, ButtonSave, ButtonTrailer} from "./styled";
+
 
 const Filme = () => {
     const {id} = useParams();
@@ -53,16 +55,20 @@ const Filme = () => {
         )
     }
 return (
-    <div>
-        <h1>{filme.nome}</h1>
-        <img src={filme.foto} alt = {filme.nome}/>
-        <h2>Sinopse</h2>
-        {filme.sinopse}
-        <div>
-            <button onClick = {() => {salvarFilme()}}>SALVAR</button>
-            <button><a target="blank" href={`https://www.youtube.com/results?search_query=${filme.nome} trailer`}></a>TRAILER</button>
-        </div>
-    </div>
+    <HomeFilmes>
+        <TituloFilme>
+            <h1>{filme.nome}</h1>
+            <img src={filme.foto} alt = {filme.nome}/>
+        </TituloFilme>
+        <SinopseFilme>
+            <h2>Sinopse</h2>
+            <strong>{filme.sinopse}</strong>
+            <ButtonsFilme>
+                <ButtonSave variant="contained" onClick = {() => {salvarFilme()}}>SALVAR</ButtonSave>
+                <ButtonTrailer><a target="_blank"  rel="noreferrer" href={`https://www.youtube.com/results?search_query=${filme.nome} trailer`}></a>TRAILER</ButtonTrailer>
+            </ButtonsFilme>
+        </SinopseFilme>
+    </HomeFilmes>
 )
 }
 export default Filme;

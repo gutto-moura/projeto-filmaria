@@ -19,6 +19,7 @@ export const DetalhesFilmes = styled.div`
 `;
 export const ImgFilmes = styled.img`
     border-radius: 10px 10px 0px 0px;
+    box-shadow: 0 0 1em #DDA0DD;
 `;
 export const TituloFilme = styled.h2`
     font-size: 30px;
