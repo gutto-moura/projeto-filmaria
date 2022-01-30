@@ -1,13 +1,14 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BASE_URL } from "../../constants/api";
-import {Link} from "react-router-dom";
+import Loading from "../../components/Loading"
 import {HomeContainer, DetalhesFilmes, ImgFilmes, TituloFilme, LinkAcessar} from "./style"
 
 
 
 const  Home = () => {
     const [filmes, setFilmes] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const loadFilmes = () => {
@@ -15,6 +16,7 @@ const  Home = () => {
             .get(`${BASE_URL}`)
             .then((res) => {
                 setFilmes(res.data)
+                setLoading(false);
             }).catch((err) => {
                 console.log(err);
             })
@@ -23,6 +25,13 @@ const  Home = () => {
         loadFilmes();
     }, [])
 
+    if(loading){
+        return (
+            <div>
+                <Loading />
+            </div>
+        )
+    }
   return (
     <HomeContainer>
      {filmes.map((filme) => {
