@@ -1,6 +1,6 @@
 import React,  {useEffect, useState} from "react";
-import {Link} from 'react-router-dom';
 import { toast } from 'react-toastify';
+import {Link} from "react-router-dom";
 import {DeleteIcon, FavoritosContainer, InfoFavoritos, DetailsFavoritos, Ul} from "./styled"
 
 function Favoritos() {
@@ -31,7 +31,7 @@ function Favoritos() {
             <InfoFavoritos key = {item.id}>
                 <span>{item.nome}</span>
               <DetailsFavoritos>
-                <Link to={`/filme/${item.id}`}>Ver detalhes</Link>
+                <Link to={`/filme/${item.id}`}> Ver detalhes </Link>
                 <DeleteIcon onClick={() => deletarFilme(item.id)} />
               </DetailsFavoritos>
             </InfoFavoritos>

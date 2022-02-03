@@ -6,6 +6,12 @@ export const HomeContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media(max-width: 800px) {
+        div {
+         width: 90%;
+        }
+    }
 `;
 export const DetalhesFilmes = styled.div`
     display: flex;
@@ -20,6 +26,7 @@ export const DetalhesFilmes = styled.div`
 export const ImgFilmes = styled.img`
     border-radius: 10px 10px 0px 0px;
     box-shadow: 0 0 1em #DDA0DD;
+
 `;
 export const TituloFilme = styled.h2`
     font-size: 30px;

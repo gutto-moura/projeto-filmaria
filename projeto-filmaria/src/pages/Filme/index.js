@@ -65,7 +65,7 @@ return (
             <strong>{filme.sinopse}</strong>
             <ButtonsFilme>
                 <ButtonSave variant="contained" onClick = {() => {salvarFilme()}}>SALVAR</ButtonSave>
-                <ButtonTrailer><a target="_blank"  rel="noreferrer" href={`https://www.youtube.com/results?search_query=${filme.nome} trailer`}></a>TRAILER</ButtonTrailer>
+                <ButtonTrailer><a target="blank"  href={`https://www.youtube.com/results?search_query=${filme.nome} trailer`}></a>TRAILER</ButtonTrailer>
             </ButtonsFilme>
         </SinopseFilme>
     </HomeFilmes>
