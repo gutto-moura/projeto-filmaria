@@ -68,7 +68,7 @@ $ npm run start
 
 <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/86565123?v=4" width="100px;" alt=""/>
 
-<p align=center>
+<p>
 Feito por Augusto Moura!
 </p>
 
