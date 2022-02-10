@@ -2,20 +2,12 @@
 
 O projeto mostra uma lista de filmes. Nele é possível ver a sinopse , salvar seu filme favorito e ver o trailer. Caso já tenha visto o filme salvo, você pode excluí-lo também. Esse projeto consome uma API  e é uma atividade do curso de React.
 
-
-
-### Versão desktop
-
-<img src="C:\Users\Usuário\Desktop\home.jpg" alt="home" style="zoom:25%;" /><img src="C:\Users\Usuário\Desktop\detalhes.jpg" alt="detalhes" style="zoom:25%;" /><img src="C:\Users\Usuário\Desktop\favoritos.jpg" alt="favoritos" style="zoom:25%;" />
-
 ---
 
-### Versão Mobile
-
-<img src="C:\Users\Usuário\Desktop\home_mobile.jpg" alt="home_mobile" style="zoom:25%;" />                          <img src="C:\Users\Usuário\Desktop\mobile_detalhes.jpg" alt="mobile_detalhes" style="zoom:25%;" />                          <img src="C:\Users\Usuário\Desktop\mobile_favoritos.jpg" alt="mobile_favoritos" style="zoom:25%;" />
+### Link do projeto
+[Filmaria](https://augustofilmaria.netlify.app)
 
 ---
-
 ### Tecnologias
 
 * React
